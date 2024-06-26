@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw] mt-10 mb-10">
-          Ready to take your <span className="text-purple"> Tech Career</span> 
+          Ready to take your <span className="text-purple"> tech career </span> 
           to the next level?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
         </p>
         <a href="mailto:growtechie.ind@gmail.com">
           <MagicButton
-            title="Let's get in touch"
+            title="Contact Us"
             icon={<FaLocationArrow />}
             position="right"
           />
