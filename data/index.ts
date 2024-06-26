@@ -19,8 +19,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title:
-      "Learn without borders, flexible time zone communications and opportunuties",
+    title: "Learn without borders, flexible time zone communications",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -30,9 +29,9 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "Course variations",
+    title: "Learn topics",
     description: "We constantly update the courses",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-3",
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -53,7 +52,7 @@ export const gridItems = [
     id: 6,
     title: "Do you want to start a project with mentors and teachers?",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",

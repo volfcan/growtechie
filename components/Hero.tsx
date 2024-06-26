@@ -10,7 +10,7 @@ import { ModelViewer } from "./model-viewer";
 const Hero = () => {
   const words = ["career", "salary", "opportunities"];
   return (
-    <div className="pb-20 pt-36">
+    <div className="pb-2 pt-6">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
