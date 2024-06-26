@@ -10,5 +10,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main"
+  ]
 }
