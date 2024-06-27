@@ -24,7 +24,7 @@ const Home = () => {
         {/* <ModelViewer /> */}
         <Grid />
         <Courses />
-        {/* <Clients /> */}
+        <Clients />
         <Experience />
         {/* <Approach /> */}
         <Footer />

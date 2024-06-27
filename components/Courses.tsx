@@ -11,10 +11,10 @@ import { GlobeDemo } from "./globe-demo";
 const Courses = () => {
   return (
     <div className="py-20">
-      <h1 className="heading">
-        Some of the available <span className="text-purple">courses</span>
+      <h1 className="heading text-center">
+        Some of our available <span className="text-purple">courses</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="grid gap-16 mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center p-4">
         {courses.map((item) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
@@ -27,19 +27,11 @@ const Courses = () => {
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative max-w-140 w-full h-full overflow-hidden lg:rounded-3xl"
-                  // style={{ backgroundColor: "#13162D" }}
                 >
-                  {/* <img src="/bg.png" alt="bgimg" /> */}
-                  {/* <ModelViewer /> */}
-                  {/* <GlobeDemo /> */}
-
                   <Image
                     src={item.img}
                     alt="cover"
                     style={{ objectFit: "cover" }}
-                    // height={100}
-                    // width={width}
-                    // priority
                     layout="fill"
                     priority
                     quality={100}

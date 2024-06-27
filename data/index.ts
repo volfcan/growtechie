@@ -1,6 +1,8 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Courses", link: "#projects" },
+  { name: "Teachers", link: "#teachers" },
+  { name: "e-Building", link: "#e-building" },
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
@@ -61,7 +63,7 @@ export const gridItems = [
 ];
 
 export const courses = [
-  {
+    {
     id: 1,
     title: "Full-stack web development",
     des: "Explore the wonders of the full-stack web development with these in depth courses covering javascript, python and more.",
@@ -94,8 +96,23 @@ export const courses = [
     iconLists: ["/next.svg", "/tail.svg", "/fm.svg", "/figma.svg"],
     link: "/ui.apple.com",
   },
+   {
+    id: 5,
+    title: "Data Analytics",
+    des: "Explore the flowing data behind every aspect of your life & Analyze them.",
+    img: "/shape2-sat.jpg",
+    iconLists: ["/python.svg", "/sql.svg", "/tableau.svg"],
+    link: "/ui.yoom.com",
+  },
+     {
+    id: 6,
+    title: "Software Testing",
+    des: "Learn Automation testing along with manual from indurstry experts..",
+    img: "/shape2-sat.jpg",
+    iconLists: ["/next.svg", "/python.svg", "/ts.svg"],
+    link: "/ui.yoom.com",
+  },
 ];
-
 export const testimonials = [
   {
     quote:
@@ -163,31 +180,31 @@ export const companies = [
 ];
 
 export const workExperience = [
-  {
+   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Internships",
+    desc: "Assisted in getting internships both paid and free ones with fortune 500 companies.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Job Mock interviews",
+    desc: "Assistance in cracking job interviews by taking lots of mock interviews for free.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    title: "Product Building",
+    desc: "Innovation is for all. All kind of supports you will get if you have good idea or project.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Finding Coding Mates",
+    desc: "Helping introverts or ones who can't find their mates to build product/projects.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
