@@ -1,0 +1,21 @@
+/* YourStyles.css */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3490dc;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2779bd;
+}
+
+.shiny-border-design {
+    border-radius: 32% 68% 74% 26% / 20% 65% 35% 80%;
+    border-top: solid 8px;
+    border-bottom: solid 8px;
+    border-color: rgba(22, 105, 99, 1);
+}
