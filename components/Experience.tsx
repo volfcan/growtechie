@@ -2,9 +2,9 @@ import React from "react";
 
 import type { NextPage, GetStaticProps } from "next";
 import { workExperience } from "@/data";
-import { loadData } from "@/lib/load-data";
+// import { loadData } from "@/lib/load-data";
 import { Button } from "./ui/MovingBorders";
-import { Hero3DCard } from "./hero-3d-card";
+// import { Hero3DCard } from "./hero-3d-caard";
 import CardModel from "./card-model";
 import { SimpleGrid } from "@chakra-ui/react";
 
@@ -28,7 +28,7 @@ const Experience: NextPage = (props: any) => {
         {/* <Hero3DCard /> */}
 
         <h1 className="heading">
-          What you will <span className="text-purple">learn</span>
+          What you will <span className="text-purple">G</span>
         </h1>
       </div>
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
@@ -73,8 +73,8 @@ const Experience: NextPage = (props: any) => {
     </div>
   );
 };
-export const getStaticProps: GetStaticProps = async (context) => {
-  const data = await loadData();
-  return { props: { data } };
-};
+// export const getStaticProps: GetStaticProps = async (context) => {
+//   const data = await loadData();
+//   return { props: { data } };
+// };
 export default Experience;
