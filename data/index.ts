@@ -71,7 +71,7 @@ export const courses = [
     img: "/fullstack-sat.jpg",
     className: "bg-cover",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    // link: "/ui.earth.com",
   },
   {
     id: 2,
@@ -79,7 +79,7 @@ export const courses = [
     des: "Explore the flowing data behind every aspect of your life.",
     img: "/shape2-sat.jpg",
     iconLists: ["/next.svg", "/python.svg", "/ts.svg"],
-    link: "/ui.yoom.com",
+    // link: "/ui.yoom.com",
   },
   {
     id: 3,
@@ -87,7 +87,7 @@ export const courses = [
     des: "Learn to apply programming from your daily tasks to 9-5 job.",
     img: "/eth-sat.jpg",
     iconLists: ["/cplusplus.svg", "/csharp.svg", "/python.svg", "/ts.svg"],
-    link: "/ui.aiimg.com",
+    // link: "/ui.aiimg.com",
   },
   {
     id: 4,
@@ -95,7 +95,7 @@ export const courses = [
     des: "Reimagine the human experience of decision making through computation.",
     img: "/shape3-sat.jpg",
     iconLists: ["/next.svg", "/tail.svg", "/fm.svg", "/figma.svg"],
-    link: "/ui.apple.com",
+    // link: "/ui.apple.com",
   },
    {
     id: 5,
@@ -103,7 +103,7 @@ export const courses = [
     des: "Explore the flowing data behind every aspect of your life & Analyze them.",
     img: "/shape2-sat.jpg",
     iconLists: ["/python.svg", "/sql.svg", "/tableau.svg"],
-    link: "/ui.yoom.com",
+    // link: "/ui.yoom.com",
   },
      {
     id: 6,
@@ -111,7 +111,7 @@ export const courses = [
     des: "Learn Automation testing along with manual from indurstry experts..",
     img: "/shape2-sat.jpg",
     iconLists: ["/next.svg", "/python.svg", "/ts.svg"],
-    link: "/ui.yoom.com",
+    // link: "/ui.yoom.com",
   },
 ];
 export const testimonials =  [
