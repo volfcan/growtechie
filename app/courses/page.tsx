@@ -5,7 +5,9 @@ export default function CoursesPage() {
   return (
     <PageWrapper>
       <div>Courses Page </div>
+
       {/* <Approach/> */}
     </PageWrapper>
   );
 }
+
