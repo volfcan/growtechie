@@ -1,11 +1,12 @@
 export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Courses", link: "#projects" },
-  { name: "Teachers", link: "#teachers" },
-  { name: "e-Building", link: "#e-building" },
+  { name: "About", link: "#workExperience" },
+  { name: "Courses", link: "#Courses" },
+  { name: "Teachers", link: "/teachers" },
+  { name: "e-Building", link: "/e-building" },
   { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  { name: "Contact", link: "#socialMedia" },
 ];
+
 
 export const gridItems = [
   {
@@ -70,7 +71,7 @@ export const courses = [
     img: "/fullstack-sat.jpg",
     className: "bg-cover",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    // link: "/ui.earth.com",
   },
   {
     id: 2,
@@ -78,7 +79,7 @@ export const courses = [
     des: "Explore the flowing data behind every aspect of your life.",
     img: "/shape2-sat.jpg",
     iconLists: ["/next.svg", "/python.svg", "/ts.svg"],
-    link: "/ui.yoom.com",
+    // link: "/ui.yoom.com",
   },
   {
     id: 3,
@@ -86,7 +87,7 @@ export const courses = [
     des: "Learn to apply programming from your daily tasks to 9-5 job.",
     img: "/eth-sat.jpg",
     iconLists: ["/cplusplus.svg", "/csharp.svg", "/python.svg", "/ts.svg"],
-    link: "/ui.aiimg.com",
+    // link: "/ui.aiimg.com",
   },
   {
     id: 4,
@@ -94,7 +95,7 @@ export const courses = [
     des: "Reimagine the human experience of decision making through computation.",
     img: "/shape3-sat.jpg",
     iconLists: ["/next.svg", "/tail.svg", "/fm.svg", "/figma.svg"],
-    link: "/ui.apple.com",
+    // link: "/ui.apple.com",
   },
    {
     id: 5,
@@ -102,7 +103,7 @@ export const courses = [
     des: "Explore the flowing data behind every aspect of your life & Analyze them.",
     img: "/shape2-sat.jpg",
     iconLists: ["/python.svg", "/sql.svg", "/tableau.svg"],
-    link: "/ui.yoom.com",
+    // link: "/ui.yoom.com",
   },
      {
     id: 6,
@@ -110,41 +111,53 @@ export const courses = [
     des: "Learn Automation testing along with manual from indurstry experts..",
     img: "/shape2-sat.jpg",
     iconLists: ["/next.svg", "/python.svg", "/ts.svg"],
-    link: "/ui.yoom.com",
+    // link: "/ui.yoom.com",
   },
 ];
-export const testimonials = [
+export const testimonials =  [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "I took a PowerBI course and then expanded my learning to SQL and Python with Growtechie. I appreciated that Growtechie didn't ask for money, allowed negotiation, and didn't make false promises about job placement. I found the prices reasonable. Thanks for the learning experience..",
+    name: "Madhura Bijawe",
+    title: "Aspiring Data Analyst/Student",
+    img: "Madhura.jpg"
+  },
+  {
+    quote:
+      "Initially hesitant due to the absence of a website, I found Growtechie on LinkedIn. Impressed by a demo class with Ramakrushna, despite occasional scolding, I appreciated his teaching style. Growtechie's commitment to affordable courses without false promises made it my ideal learning space.",
+    name: "Nikita Bhole",
+    title: "Student",
+    img:"Nikita.jpg"
+  },
+  {
+    quote:
+      "GrowTechie's Python training exceeded expectations with a practical, project-oriented approach. Expert instructors made complex concepts engaging. Hands-on learning through real-world projects boosted confidence. Comprehensive curriculum covered basics and advanced topics. Highly recommend!",
+    name: "Amit Kapoor",
+    title: "MBA Student",
+    img:"Amit.jpg"
+  },
+  {
+    quote:
+      "Highly recommend GrowTechie's SQL and Power BI training! Exceeded expectations with a focus on real-world applications and project-based learning. Solid foundation in SQL for data manipulation, and standout Power BI section for expert guidance in creating actionable dashboards. Well-crafted for today's data-centric environment.",
+    name: "Puja Samal",
+    title: "SQL Developer: CGI",
+    img:"Puja.jpg"
+  },
+  {
+    quote:
+      "Collaborating with Growtechie was an absolute pleasure. Their professionalism, promptness, and dedication to delivering exceptional sessions were evident throughout my course journey. They have really enthusiastics tutors which truly stands out. If you're seeking to elevate your tech career and elevate your brand, Growtechie is the ideal partner.",
     name: "Michael Johnson",
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
+      "Collaborating with Growtechie was an absolute pleasure. Their professionalism, promptness, and dedication to delivering exceptional sessions were evident throughout my course journey. They have really enthusiastics tutors which truly stands out. If you're seeking to elevate your tech career and elevate your brand, Growtechie is the ideal partner.",
+    name: "Rohit Kullkarni",
+    title: "Data Scientist",
+    img:"Rohit.png"
+  }
 ];
+
 
 export const companies = [
   {
