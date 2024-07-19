@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export const FloatingNav = ({
   navItems,
   className,
-  showAuthButtons = false, // Add showAuthButtons prop
+  
 }: {
   navItems: {
     name: string;
@@ -20,7 +20,7 @@ export const FloatingNav = ({
     icon?: JSX.Element;
   }[];
   className?: string;
-  showAuthButtons?: boolean; // Define showAuthButtons prop
+  
 }) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
@@ -84,7 +84,7 @@ export const FloatingNav = ({
               </Link>
             ))}
 
-            {showAuthButtons && ( // Conditionally render auth buttons
+            
               <div className="flex space-x-4 justify-end ">
                 <Link href="/login">
                   <button style={{
@@ -125,7 +125,7 @@ export const FloatingNav = ({
                   </button>
                 </Link>
               </div>
-            )}
+            
           </div>
         </div>
       </motion.div>

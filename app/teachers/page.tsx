@@ -11,7 +11,7 @@ const Teachers = () => {
     <div style={{background: '#000319',
 }}>
     <PageWrapper>
-      <FloatingNav  navItems={navItems} showAuthButtons={true} />
+      <FloatingNav  navItems={navItems} />
       <div className="container mx-auto mt-2">
         <div className="flex items-center justify-center">
           <div className="relative w-full max-w-3xl"> {/* Increased max-width for better visibility */}
