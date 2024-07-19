@@ -1,17 +1,18 @@
+// Use this directive in the parent component of FloatingNavbar.tsx
+
 "use client";
+
+// Your parent component code here
+// components/ui/FloatingNavbar.js
 import React, { useState } from "react";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export const FloatingNav = ({
   navItems,
   className,
+  showAuthButtons = false, // Add showAuthButtons prop
 }: {
   navItems: {
     name: string;
@@ -19,19 +20,15 @@ export const FloatingNav = ({
     icon?: JSX.Element;
   }[];
   className?: string;
+  showAuthButtons?: boolean; // Define showAuthButtons prop
 }) => {
   const { scrollYProgress } = useScroll();
-
-  // set true for the initial state so that nav bar is visible in the hero section
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
-
       if (scrollYProgress.get() < 0.05) {
-        // also set true for the initial state
         setVisible(true);
       } else {
         if (direction < 0) {
@@ -63,30 +60,72 @@ export const FloatingNav = ({
         )}
         style={{
           backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(17, 25, 40, 0.5)", // Adjusted transparency
+          backgroundColor: "rgba(17, 25, 40, 0.5)",
           borderRadius: "12px",
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
       >
-       <Link href="/" className="text-white font-bold text-xl ml-4" style={{ marginLeft: "4rem" }}>
-  Growtechie
-</Link>
+        <Link href="/" className="text-white font-bold text-xl ml-4">
+          Growtechie
+        </Link>
 
         <div className="flex-1 flex items-center justify-center">
           <div className="flex space-x-8">
-            {navItems.map((navItem: any, idx: number) => (
-  <Link
-    key={`link=${idx}`}
-    href={navItem.link}
-    className={cn(
-      "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-    )}
-  >
-    <span className="block sm:hidden">{navItem.icon}</span>
-    <span className="text-lg !cursor-pointer">{navItem.name}</span> {/* Increased font size to text-lg */}
-  </Link>
-))}
+            {navItems.map((navItem, idx) => (
+              <Link
+                key={`link-${idx}`}
+                href={navItem.link}
+                className={cn(
+                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                )}
+              >
+                <span className="block sm:hidden">{navItem.icon}</span>
+                <span className="text-lg cursor-pointer">{navItem.name}</span>
+              </Link>
+            ))}
 
+            {showAuthButtons && ( // Conditionally render auth buttons
+              <div className="flex space-x-4 justify-end ">
+                <Link href="/login">
+                  <button style={{
+    width: '55px',
+    height: '24px',
+    top: '71px',
+    left: '1126px',
+    gap: '0px',
+    opacity: '0px',
+    fontFamily: 'Inter',
+    fontSize: '20px',
+    fontWeight: 700,
+    lineHeight: '24.2px',
+    textAlign: 'left',
+    color: '#C1C2D3',
+  }} className="text-background: #C1C2D3 px-4 py-2 rounded-md ">
+                    Login
+                  </button>
+                </Link>
+                <Link href="/register">
+                  <button  style={{
+                      width: '148px',
+                      height: '51px',
+                      background: '#CBACF9',
+                      borderRadius: '12px',
+                      fontFamily: 'Inter',
+                      fontSize: '20px',
+                      fontWeight: 600,
+                      lineHeight: '24.2px',
+                      textAlign: 'center',
+                      color: '#04071D',
+                      border: 'none', 
+                     position:'absolute',
+                     right:'120px',
+                     bottom:'5px',
+                    }}className="text-black  px-4 py-2 rounded-md hover:bg-lavender-600">
+                    Register
+                  </button>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </motion.div>
