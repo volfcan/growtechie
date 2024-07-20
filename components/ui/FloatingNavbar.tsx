@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export const FloatingNav = ({
   navItems,
   className,
-  showAuthButtons = false, // Add showAuthButtons prop
+  showAuthButtons = true, // Add showAuthButtons prop
 }: {
   navItems: {
     name: string;
