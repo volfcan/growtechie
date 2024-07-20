@@ -3,6 +3,13 @@
     import "./style.css"
 
     const tutors = [
+        {
+        name: "Ramakrushna Mohapatra",
+        title: "Data Science & Analytics",
+        classes: "200 Classes",
+        rating: 5,
+        img: "/Ram.png",
+    },
     {
         name: "Robert James",
         title: "UI/UX Designer",
