@@ -37,7 +37,7 @@ const PopularTutors = () => {
 
   return (
    
-    <div className="p-6 rounded-lg mb-10 mt-20">
+    <div className="p-6 rounded-lg mb-10 mt-20 ">
       <div className="flex justify-between items-center mb-4">
         <h2 style={{fontFamily: 'Inria Sans',
             fontSize: '40px',
@@ -74,6 +74,7 @@ const PopularTutors = () => {
         ))}
       </div>
     </div>
+    
     
   );
 };

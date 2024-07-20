@@ -11,7 +11,7 @@ export default function PageWrapper({
   return (
     <>
       <FloatingNav navItems={navItems} />
-      <main className="flex min-w-screen flex-col pt-[12rem] items-center dark:bg-black bg-white justify-between">
+      <main className="flex min-w-screen w-full flex-col pt-[12rem] items-center  justify-between">
         {/* <div className="absolute z-[-99] pointer-events-none inset-0 flex items-center justify-center "></div> */}
         {children}
       </main>

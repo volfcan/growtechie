@@ -9,6 +9,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
+
 export const FloatingNav = ({
   navItems,
   className,
@@ -24,6 +25,11 @@ export const FloatingNav = ({
 }) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
+  
+
+  
+  
+
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
@@ -40,6 +46,9 @@ export const FloatingNav = ({
     }
   });
 
+
+   
+  
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -100,16 +109,17 @@ export const FloatingNav = ({
     lineHeight: '24.2px',
     textAlign: 'left',
     color: '#C1C2D3',
-  }} className="text-background: #C1C2D3 px-4 py-2 rounded-md ">
+  }} className="text-background: #C1C2D3 px-4 py-2 rounded-md underline ">
                     Login
                   </button>
                 </Link>
                 <Link href="/register">
                   <button  style={{
-                      width: '148px',
+                      width: '130px',
                       height: '51px',
+          
                       background: '#CBACF9',
-                      borderRadius: '12px',
+                      borderRadius: '20px',
                       fontFamily: 'Inter',
                       fontSize: '20px',
                       fontWeight: 600,
