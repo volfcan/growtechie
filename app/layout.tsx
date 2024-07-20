@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+"use client";
 
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import {
@@ -10,13 +10,10 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import GoToTopButton from '@/components/GoToTopButton';
+import { metadata } from './metadata'; // Import the metadata
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Growtechie School",
-  description: "Learn, Network & Build",
-};
 
 export default function RootLayout({
   children,
@@ -28,6 +25,8 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <head>
           <link rel="icon" href="/jsm-logo.png" sizes="any" />
+          <title>{metadata.title as string ?? 'Default Title'}</title> {/* Ensure title is string */}
+          <meta name="description" content={metadata.description as string ?? 'Default description'} /> {/* Ensure description is string */}
         </head>
         <body className={inter.className}>
           <ThemeProvider
@@ -43,6 +42,7 @@ export default function RootLayout({
               <UserButton />
             </SignedIn>
             {children}
+            <GoToTopButton />
           </ThemeProvider>
         </body>
       </html>
