@@ -9,11 +9,10 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-
 export const FloatingNav = ({
   navItems,
   className,
-  
+  showAuthButtons = true, // Add showAuthButtons prop
 }: {
   navItems: {
     name: string;
@@ -21,15 +20,10 @@ export const FloatingNav = ({
     icon?: JSX.Element;
   }[];
   className?: string;
-  
+  showAuthButtons?: boolean; // Define showAuthButtons prop
 }) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
-  
-
-  
-  
-
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
@@ -46,9 +40,6 @@ export const FloatingNav = ({
     }
   });
 
-
-   
-  
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -93,7 +84,7 @@ export const FloatingNav = ({
               </Link>
             ))}
 
-            
+            {showAuthButtons && ( // Conditionally render auth buttons
               <div className="flex space-x-4 justify-end ">
                 <Link href="/login">
                   <button style={{
@@ -109,17 +100,16 @@ export const FloatingNav = ({
     lineHeight: '24.2px',
     textAlign: 'left',
     color: '#C1C2D3',
-  }} className="text-background: #C1C2D3 px-4 py-2 rounded-md underline ">
+  }} className="text-background: #C1C2D3 px-4 py-2 rounded-md ">
                     Login
                   </button>
                 </Link>
                 <Link href="/register">
                   <button  style={{
-                      width: '130px',
+                      width: '148px',
                       height: '51px',
-          
                       background: '#CBACF9',
-                      borderRadius: '20px',
+                      borderRadius: '12px',
                       fontFamily: 'Inter',
                       fontSize: '20px',
                       fontWeight: 600,
@@ -135,7 +125,7 @@ export const FloatingNav = ({
                   </button>
                 </Link>
               </div>
-            
+            )}
           </div>
         </div>
       </motion.div>
