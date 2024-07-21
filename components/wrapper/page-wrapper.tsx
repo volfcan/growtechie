@@ -1,7 +1,6 @@
 import React from "react";
-import { FloatingNav } from "../ui/FloatingNavbar";
+import { NavbarDemo } from "../navbar";
 import Footer from "../Footer";
-import { navItems } from "@/data";
 
 export default function PageWrapper({
   children,
@@ -10,7 +9,7 @@ export default function PageWrapper({
 }) {
   return (
     <>
-      <FloatingNav navItems={navItems} />
+      <NavbarDemo />
       <main className="flex min-w-screen w-full flex-col pt-[12rem] items-center  justify-between">
         {/* <div className="absolute z-[-99] pointer-events-none inset-0 flex items-center justify-center "></div> */}
         {children}

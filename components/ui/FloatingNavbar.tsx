@@ -5,9 +5,16 @@
 // Your parent component code here
 // components/ui/FloatingNavbar.js
 import React, { useState } from "react";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import MagicButton3 from "../MagicButton2";
+import { GoSignIn } from "react-icons/go";
 
 export const FloatingNav = ({
   navItems,
@@ -56,7 +63,7 @@ export const FloatingNav = ({
         }}
         className={cn(
           "flex w-full fixed z-[5000] top-0 left-0 px-8 py-4 border border-black/[0.1] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-between bg-[rgba(17,25,40,0.75)]",
-          className
+          className,
         )}
         style={{
           backdropFilter: "blur(16px) saturate(180%)",
@@ -76,7 +83,7 @@ export const FloatingNav = ({
                 key={`link-${idx}`}
                 href={navItem.link}
                 className={cn(
-                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500",
                 )}
               >
                 <span className="block sm:hidden">{navItem.icon}</span>
@@ -85,45 +92,13 @@ export const FloatingNav = ({
             ))}
 
             {showAuthButtons && ( // Conditionally render auth buttons
-              <div className="flex space-x-4 justify-end ">
-                <Link href="/login">
-                  <button style={{
-    width: '55px',
-    height: '24px',
-    top: '71px',
-    left: '1126px',
-    gap: '0px',
-    opacity: '0px',
-    fontFamily: 'Inter',
-    fontSize: '20px',
-    fontWeight: 700,
-    lineHeight: '24.2px',
-    textAlign: 'left',
-    color: '#C1C2D3',
-  }} className="text-background: #C1C2D3 px-4 py-2 rounded-md ">
-                    Login
-                  </button>
-                </Link>
-                <Link href="/register">
-                  <button  style={{
-                      width: '148px',
-                      height: '51px',
-                      background: '#CBACF9',
-                      borderRadius: '12px',
-                      fontFamily: 'Inter',
-                      fontSize: '20px',
-                      fontWeight: 600,
-                      lineHeight: '24.2px',
-                      textAlign: 'center',
-                      color: '#04071D',
-                      border: 'none', 
-                     position:'absolute',
-                     right:'120px',
-                     bottom:'5px',
-                    }}className="text-black  px-4 py-2 rounded-md hover:bg-lavender-600">
-                    Register
-                  </button>
-                </Link>
+              <div className="flex space-x-4 justify-center items-center">
+                <div className=" text-xs">Get Started</div>
+                <MagicButton3
+                  title="Sign in"
+                  icon={<GoSignIn />}
+                  position="right"
+                />
               </div>
             )}
           </div>
